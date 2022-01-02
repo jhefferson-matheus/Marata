@@ -17,7 +17,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">GitHub</a>
+        <a class="nav-item nav-link active" href="#">Repositório</a>
         </div>
     </div>
     </nav>
