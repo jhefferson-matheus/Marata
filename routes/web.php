@@ -18,11 +18,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('welcome');
+})->name('home');
+
 Route::get('/produtos/novo', [ProdutosController::class, 'create']);
 Route::post('/produtos/novo', [ProdutosController::class, 'store'])->name('registrar_produto');
+
 Route::get('/produtos/ver/{produto}', [ProdutosController::class, 'show']);
 
-// Route::get('/produtos/ver/{id?}', function ($id){
-//     return view('/produtos/show', ['id' => $id]);
-// });
+Route::get('/produtos/edit/{produto}', [ProdutosController::class, 'edit']);
+Route::post('/produtos/edit/{produto}', [ProdutosController::class, 'update'])->name('atualizar');
+
+
+
+
 

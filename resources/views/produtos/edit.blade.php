@@ -18,25 +18,26 @@
         </button>
     </nav>
     <!--FORMULÁRIO-->
-    <center><h1 class="m2">Visualizar Produto</h1></center>
-    <form class="form_produto m2">
+    <center><h1 class="m2">Atualizar Produto</h1></center>
+    <form action="{{ route('atualizar', $produto->id) }}" class="form_produto m2" method="POST">
+    @csrf
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Nome</label>
-            <input type="text" class="form-control" name="nome" id="formGroupExampleInput2"  disabled="" value="{{ $produto->nome }}">            
+            <input type="text" class="form-control" name="nome" id="formGroupExampleInput2" value="{{ $produto->nome }}">            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Custo</label>
-            <input type="text" class="form-control" name="custo" id="formGroupExampleInput2"  disabled="" value="{{ $produto->custo }}">            
+            <input type="text" class="form-control" name="custo" id="formGroupExampleInput2" value="{{ $produto->custo }}">            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Preço</label>
-            <input type="text" class="form-control" name="preco" id="formGroupExampleInput2"  disabled="" value="{{ $produto->preco }}">            
+            <input type="text" class="form-control" name="preco" id="formGroupExampleInput2" value="{{ $produto->preco }}">            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Quantidade</label>
-            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2"  disabled="" value="{{ $produto->quantidade }}">            
+            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" value="{{ $produto->quantidade }}">            
         </div>
-        <center><a href="{{route('home')}}" class="btn btn-dark form_itens">Voltar</a></center>
+        <center><button class="btn btn-dark form_itens">Atualizar</button> </center>
     </form>
     
     <script src="{{ asset('web/jquery.js') }}"></script>

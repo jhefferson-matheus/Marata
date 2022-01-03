@@ -37,7 +37,7 @@
             <label for="formGroupExampleInput2">Quantidade</label>
             <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" placeholder="Quantidade Disponível do Produto">            
         </div>
-        <button class="btn btn-dark form_itens m1">Cadastrar</button>
+        <center><button class="btn btn-dark form_itens">Cadastrar</button> </center>
     </form>
     
     <script src="{{ asset('web/jquery.js') }}"></script>

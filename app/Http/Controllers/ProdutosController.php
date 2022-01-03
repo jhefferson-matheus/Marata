@@ -14,9 +14,7 @@ class ProdutosController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request->all());
-
-        Produto::create([
+            Produto::create([
             'nome' => $request->nome,
             'custo' =>  $request->custo,
             'preco' => $request->preco,
@@ -28,8 +26,25 @@ class ProdutosController extends Controller
     public function show(Produto $produto)
     {
         $produto = Produto::find($produto->id);
-        // return view('produtos.show', ['produto' => $produto]);
-
         return view('produtos.show', compact('produto'));
+    }
+
+    public function edit(Produto $produto)
+    {
+        $produto = Produto::find($produto->id);
+        return view('produtos.edit', compact('produto'));
+    }
+
+    public function update(Request $request, Produto $produto)
+    {
+        $produto = Produto::find($produto->id);
+
+        $produto->update([
+            'nome' => $request->nome,
+            'custo' => $request->custo,
+            'preco' => $request->preco,
+            'quantidade' => $request->quantidade,
+        ]);
+        return "Atualizado Com Sucesso!";
     }
 }
