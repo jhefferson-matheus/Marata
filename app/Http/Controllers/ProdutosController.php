@@ -47,4 +47,18 @@ class ProdutosController extends Controller
         ]);
         return "Atualizado Com Sucesso!";
     }
+
+    public function delete(Produto $produto)
+    {
+        $produto = Produto::find($produto->id);
+        return view('produtos.drop', compact('produto'));
+    }
+
+    public function destroy(Produto $produto)
+    {
+        $produto = Produto::find($produto->id);
+        $produto->delete();
+
+        return "Produto Excluido!";
+    }
 }

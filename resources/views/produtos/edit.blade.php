@@ -11,14 +11,17 @@
 </head>
 <body>
      <!--MENU NAV-BAR-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="https://github.com/jhefferson-matheus/Marata"><img class="logo_marata" src="{{url('/img/lg.png')}}" alt="Image"/></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="bg-light">
+        <center>
+            <a href="https://github.com/jhefferson-matheus/Marata">
+                <img class="logo_marata" src="{{url('/img/lg.png')}}" alt="Image"/>
+            </a>
+        </center>
     </nav>
     <!--FORMULÁRIO-->
-    <center><h1 class="m2">Atualizar Produto</h1></center>
+    <center>
+        <h1 class="m2">Atualizar Produto</h1>
+    </center>
     <form action="{{ route('atualizar', $produto->id) }}" class="form_produto m2" method="POST">
     @csrf
         <div class="form-group form_itens">
@@ -37,7 +40,9 @@
             <label for="formGroupExampleInput2">Quantidade</label>
             <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" value="{{ $produto->quantidade }}">            
         </div>
-        <center><button class="btn btn-dark form_itens">Atualizar</button> </center>
+        <center>
+            <button class="btn btn-dark form_itens">Atualizar</button>
+        </center>
     </form>
     
     <script src="{{ asset('web/jquery.js') }}"></script>

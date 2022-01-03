@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="{{ asset('web/app.css') }}">
 </head>
 <body>
-     <!--MENU NAV-BAR-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="https://github.com/jhefferson-matheus/Marata"><img class="logo_marata" src="{{url('/img/lg.png')}}" alt="Image"/></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!--MENU NAV-BAR-->
+    <nav class="bg-light">
+        <center>
+            <a href="https://github.com/jhefferson-matheus/Marata">
+                <img class="logo_marata" src="{{url('/img/lg.png')}}" alt="Image"/>
+            </a>
+        </center>
     </nav>
     <!--FORMULÁRIO-->
     <center><h1 class="m2">Cadastrar Produtos</h1></center>
@@ -37,7 +38,18 @@
             <label for="formGroupExampleInput2">Quantidade</label>
             <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" placeholder="Quantidade Disponível do Produto">            
         </div>
-        <center><button class="btn btn-dark form_itens">Cadastrar</button> </center>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                <center><a href="{{route('home')}}" class="btn btn-dark form_itens">Voltar</a></center>                
+                </div>
+                <div class="col-sm">
+                <center><button class="btn btn-primary form_itens">Cadastrar</button> </center>
+                </div>
+            </div>
+        </div>        
+        
     </form>
     
     <script src="{{ asset('web/jquery.js') }}"></script>
