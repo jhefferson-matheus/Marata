@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produto;
 
 class ProdutosController extends Controller
 {
@@ -13,6 +14,14 @@ class ProdutosController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        //dd($request->all());
+
+        Produto::create([
+            'nome' => $request->nome,
+            'custo' =>  $request->custo,
+            'preco' => $request->preco,
+            'quantidade' => $request->quantidade,
+        ]);
+        return "Produto Criado com Sucesso!";
     }
 }

@@ -1,20 +1,16 @@
 .logo_marata{
     width: 40%;
-    padding-left: 5%;
+    margin-left: 100%;
 }
-
 .logo_marata_dl{
     width: 20%;    
     margin-left: 40%;
     margin-bottom: 10%;
 }
-
 .form_produto{
     margin-left: 35%;
-    margin-right: 35%;
-    
+    margin-right: 35%; 
 }
-
 .form_itens{
     padding: 2%;
 }
@@ -24,4 +20,11 @@
 }
 .m2{
     margin-top: 5%;
+}
+.navbar-brand{
+    margin-left: 24%;
+}
+.navbar{
+padding-top: 1%;
+padding-bottom: 1%;
 }
