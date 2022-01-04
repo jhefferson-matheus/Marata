@@ -23,7 +23,7 @@
     <center><h1>Deseja Deletar o Item Selecionado?</h1></center>
     <br><br><br><br>
 
-    <form action="{{ route('deletar', $produto->id) }}" class="form_produto m2" method="POST">
+    <form action="{{ route('deletarProduto', $produto->id) }}" class="form_produto m2" method="POST">
     @csrf
         <div class="container">
                 <div class="row">

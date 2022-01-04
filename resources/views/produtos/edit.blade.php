@@ -22,7 +22,7 @@
     <center>
         <h1 class="m2">Atualizar Produto</h1>
     </center>
-    <form action="{{ route('atualizar', $produto->id) }}" class="form_produto m2" method="POST">
+    <form action="{{ route('atualizarProduto', $produto->id) }}" class="form_produto m2" method="POST">
     @csrf
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Nome</label>

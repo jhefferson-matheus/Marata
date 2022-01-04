@@ -20,7 +20,7 @@
     </nav>
     <!--FORMULÁRIO-->
     <center><h1 class="m2">Cadastrar Pedidos</h1></center>
-    <form action="{{ route('registrar_pedidos') }}" class="form_produto m2" method="POST">
+    <form action="{{ route('registrarPedido') }}" class="form_produto m2" method="POST">
         @csrf
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">ID</label>

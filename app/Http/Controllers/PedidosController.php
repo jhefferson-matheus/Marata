@@ -22,23 +22,23 @@ class PedidosController extends Controller
         return "Pedidos Criado com Sucesso!";
     }
 
-    public function show(Pedido $pedidos)
+    public function show(Pedido $pedido)
     {
-        $pedidos = Pedido::find($pedidos->id);
-        return view('pedidos.show', compact('pedidos'));
+        $pedido = Pedido::find($pedido->id);
+        return view('pedidos.show', compact('pedido'));
     }
 
-    public function edit(Pedido $pedidos)
+    public function edit(Pedido $pedido)
     {
-        $pedidos = Pedido::find($pedidos->id);
-        return view('pedidos.edit', compact('pedidos'));
+        $pedido = Pedido::find($pedido->id);
+        return view('pedidos.edit', compact('pedido'));
     }
 
-    public function update(Request $request, Pedido $pedidos)
+    public function update(Request $request, Pedido $pedido)
     {
-        $pedidos = Pedido::find($pedidos->id);
+        $pedido = Pedido::find($pedido->id);
 
-        $pedidos->update([
+        $pedido->update([
             'id_produto' => $request->id_produto,
             'status' =>  $request->status,            
             'quantidade' => $request->quantidade,
@@ -46,16 +46,16 @@ class PedidosController extends Controller
         return "Atualizado Com Sucesso!";
     }
 
-    public function delete(Pedido $pedidos)
+    public function delete(Pedido $pedido)
     {
-        $pedidos = Pedido::find($pedidos->id);
-        return view('pedidos.drop', compact('pedidos'));
+        $pedidos = Pedido::find($pedido->id);
+        return view('pedidos.drop', compact('pedido'));
     }
 
-    public function destroy(Pedido $pedidos)
+    public function destroy(Pedido $pedido)
     {
-        $pedidos = Pedido::find($pedidos->id);
-        $pedidos->delete();
+        $pedido = Pedido::find($pedido->id);
+        $pedido->delete();
 
         return "Pedidos Excluido!";
     }

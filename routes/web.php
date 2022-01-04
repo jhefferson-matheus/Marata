@@ -22,24 +22,24 @@ Route::get('/', function () {
 |--------------------------------------------------------------------------|
 */
 Route::get('/produtos/novo', [ProdutosController::class, 'create']);
-Route::post('/produtos/novo', [ProdutosController::class, 'store'])->name('registrar_produto');
+Route::post('/produtos/novo', [ProdutosController::class, 'store'])->name('registrarProduto');
 Route::get('/produtos/ver/{produto}', [ProdutosController::class, 'show']);
 Route::get('/produtos/edit/{produto}', [ProdutosController::class, 'edit']);
-Route::post('/produtos/edit/{produto}', [ProdutosController::class, 'update'])->name('atualizar');
+Route::post('/produtos/edit/{produto}', [ProdutosController::class, 'update'])->name('atualizarProduto');
 Route::get('/produtos/drop/{produto}', [ProdutosController::class, 'delete']);
-Route::post('/produtos/drop/{produto}', [ProdutosController::class, 'destroy'])->name('deletar');
+Route::post('/produtos/drop/{produto}', [ProdutosController::class, 'destroy'])->name('deletarProduto');
 /*
 |--------------------------------------------------------------------------|
 |                                  PEDIDOS                                 |
 |--------------------------------------------------------------------------|
 */
 Route::get('/pedidos/novo', [PedidosController::class, 'create']);
-Route::post('/pedidos/novo', [PedidosController::class, 'store'])->name('registrar_pedidos');
-Route::get('/pedidos/ver/{pedidos}', [PedidosController::class, 'show']);
-Route::get('/pedidos/edit/{pedidos}', [PedidosController::class, 'edit']);
-Route::post('/pedidos/edit/{pedidos}', [PedidosController::class, 'update'])->name('atualizar');
-Route::get('/pedidos/drop/{pedidos}', [PedidosController::class, 'delete']);
-Route::post('/pedidos/drop/{pedidos}', [PedidosController::class, 'destroy'])->name('deletar');
+Route::post('/pedidos/novo', [PedidosController::class, 'store'])->name('registrarPedido');
+Route::get('/pedidos/ver/{pedido}', [PedidosController::class, 'show']);
+Route::get('/pedidos/edit/{pedido}', [PedidosController::class, 'edit']);
+Route::post('/pedidos/edit/{pedido}', [PedidosController::class, 'update'])->name('atualizarPedido');
+Route::get('/pedidos/drop/{pedido}', [PedidosController::class, 'delete']);
+Route::post('/pedidos/drop/{pedido}', [PedidosController::class, 'destroy'])->name('deletarPedido');
 
 
 
