@@ -56,11 +56,11 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Liste, pesquise ou cadastre produtos Marata.<br>
+                                    Liste, pesquise ou cadastre produtos Marata.<br><br>
 
-                                    Cadastrar: http://127.0.0.1:8000/produtos/novo - cadastrar
-                                    Editar: http://127.0.0.1:8000/produtos/edit/1 - editar
-                                    Excluir: http://127.0.0.1:8000/produtos/drop/1 - excluir
+                                    Cadastrar: http://127.0.0.1:8000/produtos/novo<br>
+                                    Editar: http://127.0.0.1:8000/produtos/edit/1<br>
+                                    Excluir: http://127.0.0.1:8000/produtos/drop/1<br>
                                 </div>
                             </div>
                         </div>
@@ -73,12 +73,12 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Que tal analisar os dados de todos os pedidos, filtrar o realizar mais pedidos?<br>
+                                    Que tal analisar os dados de todos os pedidos, filtrar o realizar mais pedidos?<br><br>
 
 
-                                    Cadastrar: http://127.0.0.1:8000/pedidos/novo - cadastrar
-                                    Editar: http://127.0.0.1:8000/pedidos/edit/1 - editar
-                                    Excluir: http://127.0.0.1:8000/pedidos/drop/1 - excluir
+                                    Cadastrar: http://127.0.0.1:8000/pedidos/novo<br>
+                                    Editar: http://127.0.0.1:8000/pedidos/edit/1<br>
+                                    Excluir: http://127.0.0.1:8000/pedidos/drop/1<br>
                                 </div>
                             </div>
                         </div>
