@@ -34,7 +34,7 @@ class PedidosController extends Controller
         return view('pedidos.edit', compact('pedido'));
     }
 
-    public function update(Request $request, Pedido $produto)
+    public function update(Request $request, Pedido $pedido)
     {
         $pedido = Pedido::find($pedido->id);
 
