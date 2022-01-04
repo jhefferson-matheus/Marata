@@ -19,7 +19,7 @@
         </center>
     </nav>
     <!--FORMULÁRIO-->
-    <center><h1 class="m2">Cadastrar Pedidos</h1></center>
+    <center><h1 class="m2">Atualizar Pedidos</h1></center>
     <form action="{{ route('atualizarPedido', $pedido->id) }}" class="form_produto m2" method="POST">
         @csrf
         <div class="form-group form_itens">
@@ -45,7 +45,7 @@
                 <center><a href="{{route('home')}}" class="btn btn-dark form_itens">Voltar</a></center>                
                 </div>
                 <div class="col-sm">
-                <center><button class="btn btn-primary form_itens">Cadastrar</button> </center>
+                <center><button class="btn btn-primary form_itens">Atualizar</button> </center>
                 </div>
             </div>
         </div>        

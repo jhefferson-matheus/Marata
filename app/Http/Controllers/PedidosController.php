@@ -34,7 +34,7 @@ class PedidosController extends Controller
         return view('pedidos.edit', compact('pedido'));
     }
 
-    public function update(Request $request, Pedido $pedido)
+    public function update(Request $request, Pedido $produto)
     {
         $pedido = Pedido::find($pedido->id);
 
@@ -43,12 +43,12 @@ class PedidosController extends Controller
             'status' =>  $request->status,            
             'quantidade' => $request->quantidade,
         ]);
-        return "Atualizado Com Sucesso!";
+        return "Atualizado Com Sucesso!";return view('pedido.show', compact('pedido'));
     }
 
     public function delete(Pedido $pedido)
     {
-        $pedidos = Pedido::find($pedido->id);
+        $pedido = Pedido::find($pedido->id);
         return view('pedidos.drop', compact('pedido'));
     }
 
@@ -57,6 +57,6 @@ class PedidosController extends Controller
         $pedido = Pedido::find($pedido->id);
         $pedido->delete();
 
-        return "Pedidos Excluido!";
+        return "Pedido Excluido!";
     }
 }
