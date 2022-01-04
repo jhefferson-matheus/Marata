@@ -23,7 +23,8 @@
         <table class="table">
         <thead>
             <tr>
-            <th scope="col">ID</th>
+            <th scope="col">#</th>
+            <th scope="col">ID do Produto</th>
             <th scope="col">Status</th>
             <th scope="col">quantidade</th>
             </tr>
@@ -32,6 +33,7 @@
             <tbody>
                 @foreach($pedido as $p)
                 <tr>
+                    <td>{{ $p->id }}</td>
                     <td>{{ $p->id_produto }}</td>
                     <td>{{ $p->status }}</td>
                     <td>{{ $p->quantidade }}</td>

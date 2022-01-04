@@ -23,6 +23,7 @@
         <table class="table">
         <thead>
             <tr>
+            <th scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col">Custo</th>
             <th scope="col">Preço</th>
@@ -33,6 +34,7 @@
             <tbody>
                 @foreach($produto as $p)
                 <tr>
+                <td>{{ $p->id }}</td>
                     <td>{{ $p->nome }}</td>
                     <td>{{ $p->custo }}</td>
                     <td>{{ $p->preco }}</td>
