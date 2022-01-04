@@ -56,7 +56,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Liste, pesquise ou cadastre produtos Marata.
+                                    Liste, pesquise ou cadastre produtos Marata.<br>
 
                                     Cadastrar: http://127.0.0.1:8000/produtos/novo - cadastrar
                                     Editar: http://127.0.0.1:8000/produtos/edit/1 - editar
@@ -73,7 +73,8 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Que tal analisar os dados de todos os pedidos, filtrar o realizar mais pedidos?
+                                    Que tal analisar os dados de todos os pedidos, filtrar o realizar mais pedidos?<br>
+
 
                                     Cadastrar: http://127.0.0.1:8000/pedidos/novo - cadastrar
                                     Editar: http://127.0.0.1:8000/pedidos/edit/1 - editar
