@@ -59,4 +59,10 @@ class PedidosController extends Controller
 
         return "Pedido Excluido!";
     }
+
+    public function list(Request $request, Pedido $pedido)
+    {
+        $pedido = Pedido::all();        
+        return view('pedidos.list', compact('pedido'));
+    }
 }

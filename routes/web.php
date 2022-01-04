@@ -40,6 +40,7 @@ Route::get('/pedidos/edit/{pedido}', [PedidosController::class, 'edit']);
 Route::post('/pedidos/edit/{pedido}', [PedidosController::class, 'update'])->name('atualizarPedido');
 Route::get('/pedidos/drop/{pedido}', [PedidosController::class, 'delete']);
 Route::post('/pedidos/drop/{pedido}', [PedidosController::class, 'destroy'])->name('deletarPedido');
+Route::get('/pedidos/list', [PedidosController::class, 'list']);
 
 
 
