@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Pedidos</title>
 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ asset('web/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('web/app.css') }}">
 </head>
@@ -28,17 +29,21 @@
             <th scope="col">Custo</th>
             <th scope="col">Preço</th>
             <th scope="col">Quantidade</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
             </tr>
         </thead>
 
             <tbody>
                 @foreach($produto as $p)
                 <tr>
-                <td>{{ $p->id }}</td>
+                    <td>{{ $p->id }}</td>
                     <td>{{ $p->nome }}</td>
                     <td>{{ $p->custo }}</td>
                     <td>{{ $p->preco }}</td>
                     <td>{{ $p->quantidade }}</td>
+                    <td><a href="/produtos/edit/{{$p->id}}"><button class="btn btn-primary"  type="button"><i class="fa fa-pencil-square-o"></i></button></a></td>
+                    <td><a href="/produtos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"> <i class="fa fa-trash-o"></i></button></a></td>
                 </tr>
                 @endforeach
             </tbody>

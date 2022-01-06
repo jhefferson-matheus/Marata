@@ -9,13 +9,8 @@ use App\Http\Controllers\PedidosController;
 |                               TELA INICIAL                               |
 |--------------------------------------------------------------------------|
 */
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [ProdutosController::class, 'index']);
+Route::get('/', [ProdutosController::class, 'index'])->name('index');
 /*
 |--------------------------------------------------------------------------|
 |                                 PRODUTOS                                 |
@@ -28,7 +23,6 @@ Route::get('/produtos/edit/{produto}', [ProdutosController::class, 'edit']);
 Route::post('/produtos/edit/{produto}', [ProdutosController::class, 'update'])->name('atualizarProduto');
 Route::get('/produtos/drop/{produto}', [ProdutosController::class, 'delete']);
 Route::post('/produtos/drop/{produto}', [ProdutosController::class, 'destroy'])->name('deletarProduto');
-Route::get('/produtos/list', [ProdutosController::class, 'list']);
 /*
 |--------------------------------------------------------------------------|
 |                                  PEDIDOS                                 |

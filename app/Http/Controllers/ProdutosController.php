@@ -62,9 +62,9 @@ class ProdutosController extends Controller
         return "Produto Excluido!";
     }
 
-    public function list(Request $request, Produto $produto)
+    public function index(Request $request, Produto $produto)
     {
         $produto = Produto::all();        
-        return view('produtos.list', compact('produto'));
+        return view('produtos.index', compact('produto'));
     }
 }
