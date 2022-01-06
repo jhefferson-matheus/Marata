@@ -37,7 +37,7 @@
             <label for="formGroupExampleInput2">Quantidade</label>
             <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2"  disabled="" value="{{ $produto->quantidade }}">            
         </div>
-        <center><a href="{{route('home')}}" class="btn btn-primary form_itens">Voltar</a></center>
+        <center><a href="{{route('index')}}" class="btn btn-primary form_itens">Voltar</a></center>
     </form>
     
     <script src="{{ asset('web/jquery.js') }}"></script>

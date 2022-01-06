@@ -42,7 +42,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                <center><a href="{{route('home')}}" class="btn btn-dark form_itens">Voltar</a></center>                
+                <center><a href="{{route('index')}}" class="btn btn-dark form_itens">Voltar</a></center>                
                 </div>
                 <div class="col-sm">
                 <center><button class="btn btn-primary form_itens">Cadastrar</button> </center>
