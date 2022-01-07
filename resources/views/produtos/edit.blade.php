@@ -41,7 +41,7 @@
             <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" value="{{ $produto->quantidade }}">            
         </div>
         <center>
-            <button class="btn btn-dark form_itens">Atualizar</button>
+            <button class="btn btn-success form_itens">Atualizar <i class="fa fa-check-square-o" aria-hidden="true"></i></i></button>
         </center>
     </form>
     

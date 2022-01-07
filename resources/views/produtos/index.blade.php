@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Pedidos</title>
-
+    <!--LINKS DO NOSSO BOTSTRAP-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ asset('web/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('web/app.css') }}">

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Pedidos</title>
-
+    <!--LINKS DO NOSSO BOTSTRAP-->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ asset('web/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('web/app.css') }}">
@@ -19,6 +19,7 @@
             </a>
         </center>
     </nav>
+     <!--OPÇÕES DE CADASTRO E PESQUISA-->
     <center><h2 class="m2">Lista de Pedidos</h2></center>
     <div class="list">
         <div class="row">
@@ -38,6 +39,7 @@
                 </a>
             </div>  
         </div>  
+        <!--TABELA DE LISTA DE PRODUTOS-->
         <table class="table">
         <thead>
             <tr>

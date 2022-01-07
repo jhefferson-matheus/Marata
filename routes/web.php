@@ -29,6 +29,9 @@ Route::post('/produtos/drop/{produto}', [ProdutosController::class, 'destroy'])-
 |--------------------------------------------------------------------------|
 */
 //Route::get('/pedidos/novo/{pedido}', [PedidosController::class, 'create']);
+Route::get('/pedidos/novo/{pedido}', function($id){
+    return view('pedidos.create', ['id' => $id]);
+});
 Route::post('/pedidos/novo', [PedidosController::class, 'store'])->name('registrarPedido');
 Route::get('/pedidos/ver/{pedido}', [PedidosController::class, 'show']);
 Route::get('/pedidos/edit/{pedido}', [PedidosController::class, 'edit']);
@@ -39,6 +42,3 @@ Route::get('/pedidos/list', [PedidosController::class, 'list']);
 
 
 
-Route::get('/pedidos/novo/{pedido}', function($id){
-    return view('pedidos.create', ['id' => $id]);
-});

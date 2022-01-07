@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo Pedido</title>
-
+    <!--LINKS DO NOSSO BOTSTRAP-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ asset('web/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('web/app.css') }}">
 </head>
@@ -24,7 +25,7 @@
         @csrf
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">ID</label>
-            <input type="text" class="form-control" name="id_produto" id="formGroupExampleInput2" placeholder="ID do Pedido" value="{{ $pedido->id_produto }}" disabled>            
+            <input type="text" class="form-control" name="id_produto" id="formGroupExampleInput2" placeholder="ID do Pedido" value="{{ $pedido->id_produto }}" readonly>            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Status</label>                      
@@ -42,10 +43,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                <center><a href="{{route('index')}}" class="btn btn-dark form_itens">Voltar</a></center>                
+                    <center><a href="{{route('index')}}" class="btn btn-danger form_itens">Voltar <i class="fa fa-times-circle-o" aria-hidden="true"></i></a></center>                
                 </div>
                 <div class="col-sm">
-                <center><button class="btn btn-primary form_itens">Atualizar</button> </center>
+                    <center><button class="btn btn-success form_itens">Atualizar <i class="fa fa-check-square-o" aria-hidden="true"></i></i></button> </center>
                 </div>
             </div>
         </div>        
