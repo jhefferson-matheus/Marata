@@ -26,19 +26,19 @@
     @csrf
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Nome</label>
-            <input type="text" class="form-control" name="nome" id="formGroupExampleInput2" value="{{ $produto->nome }}">            
+            <input type="text" class="form-control" name="nome" id="formGroupExampleInput2" value="{{ $produto->nome }}" required>            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Custo</label>
-            <input type="text" class="form-control" name="custo" id="formGroupExampleInput2" value="{{ $produto->custo }}">            
+            <input type="text" class="form-control" name="custo" id="formGroupExampleInput2" value="{{ $produto->custo }}" required>            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Preço</label>
-            <input type="text" class="form-control" name="preco" id="formGroupExampleInput2" value="{{ $produto->preco }}">            
+            <input type="text" class="form-control" name="preco" id="formGroupExampleInput2" value="{{ $produto->preco }}" required>            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Quantidade</label>
-            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" value="{{ $produto->quantidade }}">            
+            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" value="{{ $produto->quantidade }}" required>            
         </div>
         <center>
             <button class="btn btn-success form_itens">Atualizar <i class="fa fa-check-square-o" aria-hidden="true"></i></i></button>

@@ -25,19 +25,19 @@
         @csrf
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Nome</label>
-            <input type="text" class="form-control" name="nome" id="formGroupExampleInput2" placeholder="Nome do Produto">            
+            <input type="text" class="form-control" name="nome" id="formGroupExampleInput2" placeholder="Nome do Produto" required>            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Custo</label>
-            <input type="text" class="form-control" name="custo" id="formGroupExampleInput2" placeholder="Custo de Fabricação do Produto">            
+            <input type="text" class="form-control" name="custo" id="formGroupExampleInput2" placeholder="Custo de Fabricação do Produto" required>            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Preço</label>
-            <input type="text" class="form-control" name="preco" id="formGroupExampleInput2" placeholder="Preço do Produto">            
+            <input type="text" class="form-control" name="preco" id="formGroupExampleInput2" placeholder="Preço do Produto" required>            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Quantidade</label>
-            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" placeholder="Quantidade Disponível do Produto">            
+            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" placeholder="Quantidade Disponível do Produto" required>            
         </div>
 
         <div class="container">

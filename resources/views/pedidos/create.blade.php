@@ -25,18 +25,18 @@
         @csrf
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">ID</label>
-            <input type="text" class="form-control" name="id_produto" id="formGroupExampleInput2" placeholder="ID do Pedido" value="{{ $id }}" readonly>            
+            <input type="text" class="form-control" name="id_produto" id="formGroupExampleInput2" placeholder="ID do Pedido" value="{{ $id }}" readonly required>            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Status</label>                      
-            <select name="status" id="formGroupExampleInput2" class="form-control" placeholder="Status do Pedido">
+            <select name="status" id="formGroupExampleInput2" class="form-control" placeholder="Status do Pedido" required>
             <option value="Em Aberto">Em Aberto</option>
             <option value="Pago">Pago</option>
             </select>          
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Quantidade</label>
-            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" placeholder="Quantidade  do Pedido">            
+            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" placeholder="Quantidade  do Pedido" required>            
         </div>
         <br /><br />
         <div class="container">
