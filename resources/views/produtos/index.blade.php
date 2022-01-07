@@ -45,7 +45,7 @@
                     </a>
                 </div>            
             </div>
-        </div>        
+        </div>                
         <!--TABELA DE LISTA DE PRODUTOS-->
         <table class="table">
         <thead>
@@ -70,7 +70,7 @@
                     <td>{{ $p->preco }}</td>
                     <td>{{ $p->quantidade }}</td>
                     <td><a href="/produtos/edit/{{$p->id}}"><button class="btn btn-info"  type="button"><i class="fa fa-pencil"></i></button></a></td>
-                    <td><a href="/pedidos/novo/"><button class="btn btn-primary"  type="button"><i class="fa fa-plus"></i></button></a></td>
+                    <td><a href="/pedidos/novo/{{$p->id}}"><button class="btn btn-primary"  type="button"><i class="fa fa-plus"></i></button></a></td>
                     <td><a href="/produtos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"><i class="fa fa-trash-o"></i></button></a></td>
                 </tr>
                 @endforeach

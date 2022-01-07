@@ -9,7 +9,8 @@ use App\Models\Produto;
 class PedidosController extends Controller
 {
     public function create()
-    {
+    {        
+        
         return view('pedidos.create');
     }
 
@@ -20,7 +21,7 @@ class PedidosController extends Controller
             'status' =>  $request->status,            
             'quantidade' => $request->quantidade,
         ]);
-        return "Pedidos Criado com Sucesso!";
+        return "Pedido realizado com sucesso";
     }
 
     public function show(Pedido $pedido)
