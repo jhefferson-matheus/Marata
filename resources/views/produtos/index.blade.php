@@ -25,14 +25,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="search">
-                    <div class="input-group-btn">
-          	            <button class="btn btn-secondary" type="submit">
-            	            <i class="fa fa-search"></i>
-          	            </button>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-secondary" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="col-3">
                     <a href="/produtos/novo" class="cd-bt">

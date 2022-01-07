@@ -24,7 +24,7 @@
         @csrf
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">ID</label>
-            <input type="text" class="form-control" name="id_produto" id="formGroupExampleInput2" placeholder="ID do Pedido" value="{{ $pedido->id_produto }}">            
+            <input type="text" class="form-control" name="id_produto" id="formGroupExampleInput2" placeholder="ID do Pedido" value="{{ $pedido->id_produto }}" disabled>            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Status</label>                      

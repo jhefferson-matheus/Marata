@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Pedidos</title>
 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ asset('web/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('web/app.css') }}">
 </head>
@@ -20,6 +21,23 @@
     </nav>
     <center><h2 class="m2">Lista de Pedidos</h2></center>
     <div class="list">
+        <div class="row">
+            <div class="col-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-secondary" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 lft">
+                <a href="{{route('index')}}" class="cd-bt">
+                    <button class="btn btn-dark"  type="button">Cadastrar Pedidos <i class="fa fa-list-ul"></i></button>
+                </a>
+            </div>  
+        </div>  
         <table class="table">
         <thead>
             <tr>
@@ -27,6 +45,8 @@
             <th scope="col">ID do Produto</th>
             <th scope="col">Status</th>
             <th scope="col">quantidade</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
             </tr>
         </thead>
 
@@ -37,6 +57,8 @@
                     <td>{{ $p->id_produto }}</td>
                     <td>{{ $p->status }}</td>
                     <td>{{ $p->quantidade }}</td>
+                    <td><a href="/pedidos/edit/{{$p->id}}"><button class="btn btn-info"  type="button"><i class="fa fa-pencil"></i></button></a></td>
+                    <td><a href="/pedidos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"><i class="fa fa-trash-o"></i></button></a></td>
                 </tr>
                 @endforeach
             </tbody>
