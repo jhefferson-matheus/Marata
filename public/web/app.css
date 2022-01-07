@@ -38,3 +38,23 @@ padding-bottom: 1%;
 .lft{
     padding-left: 10%;
 }
+
+.pagination {
+    display: inline-block;        
+    padding: 1px 1px;    
+  }
+
+ .w-5{
+    width: 30px;
+ }
+
+ .h-5{
+    width: 30px;
+ }
+
+.px-4{
+    color: black;        
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);    
+}

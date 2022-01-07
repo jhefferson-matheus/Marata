@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <input type="text" class="form-control" placeholder="Pesquisar Pedidos" name="search">
                     <div class="input-group-btn">
                         <button class="btn btn-secondary" type="submit">
                             <i class="fa fa-search"></i>

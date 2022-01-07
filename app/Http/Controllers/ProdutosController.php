@@ -6,8 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\Produto;
 
 class ProdutosController extends Controller
-{
-    public function create()
+{ 
+    public function index(Request $request, Produto $produto)
+    {
+        $produto = Produto::paginate(20);
+        return view('produtos.index', compact('produto'));
+    }
+    
+    public function create(Produto $produto)
     {
         return view('produtos.create');
     }
@@ -65,9 +71,12 @@ class ProdutosController extends Controller
         javascript:window.location='../../';</script>";
     }
 
-    public function index(Request $request, Produto $produto)
+   
+    
+    public function search(Request $request)
     {
-        $produto = Produto::all();        
-        return view('produtos.index', compact('produto'));
+        $produto = Produto::where('nome', '=', "%$request->search%")
+                            ->orWhere('content', 'LIKE', "%$request->search%")
+                            ->paginate();
     }
 }

@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="search">
+                        <input type="text" class="form-control" placeholder="Pesquisar Produtos" name="search">
                         <div class="input-group-btn">
                             <button class="btn btn-secondary" type="submit">
                                 <i class="fa fa-search"></i>
@@ -48,34 +48,39 @@
         </div>                
         <!--TABELA DE LISTA DE PRODUTOS-->
         <table class="table">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Custo</th>
-            <th scope="col">Preço</th>
-            <th scope="col">Quantidade</th>
-            <th scope="col">Editar</th>
-            <th scope="col">Pedido</th>
-            <th scope="col">Excluir</th>
-            </tr>            
-        </thead>
-
-            <tbody>
-                @foreach($produto as $p)
+            <thead>
                 <tr>
-                    <td>{{ $p->id }}</td>
-                    <td>{{ $p->nome }}</td>
-                    <td>{{ $p->custo }}</td>
-                    <td>{{ $p->preco }}</td>
-                    <td>{{ $p->quantidade }}</td>
-                    <td><a href="/produtos/edit/{{$p->id}}"><button class="btn btn-info"  type="button"><i class="fa fa-pencil"></i></button></a></td>
-                    <td><a href="/pedidos/novo/{{$p->id}}"><button class="btn btn-primary"  type="button"><i class="fa fa-plus"></i></button></a></td>
-                    <td><a href="/produtos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"><i class="fa fa-trash-o"></i></button></a></td>
-                </tr>
-                @endforeach
-            </tbody>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Custo</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Pedido</th>
+                <th scope="col">Excluir</th>
+                </tr>            
+            </thead>
+
+                <tbody>
+                    @foreach($produto as $p)
+                    <tr>
+                        <td>{{ $p->id }}</td>
+                        <td>{{ $p->nome }}</td>
+                        <td>{{ $p->custo }}</td>
+                        <td>{{ $p->preco }}</td>
+                        <td>{{ $p->quantidade }}</td>
+                        <td><a href="/produtos/edit/{{$p->id}}"><button class="btn btn-info"  type="button"><i class="fa fa-pencil"></i></button></a></td>
+                        <td><a href="/pedidos/novo/{{$p->id}}"><button class="btn btn-primary"  type="button"><i class="fa fa-plus"></i></button></a></td>
+                        <td><a href="/produtos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"><i class="fa fa-trash-o"></i></button></a></td>
+                    </tr>
+                    @endforeach                                
+                </tbody>
         </table>
+        
+        <hr>
+        <div class="d-flex justify-content-center">
+    {!! $produto->links() !!}
+</div>
     </div>
 
     <script src="{{ asset('web/jquery.js') }}"></script>
