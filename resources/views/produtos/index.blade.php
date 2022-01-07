@@ -25,22 +25,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Pesquisar Produtos" name="search">
-                        <div class="input-group-btn">
-                            <button class="btn btn-secondary" type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
+                    <form action="{{ route('pesquisar') }}" method="post">
+                        @csrf                    
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Pesquisar Produtos" name="search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-secondary" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>                    
+                    </form>
                 </div>
                 <div class="col-3">
-                    <a href="/produtos/novo" class="cd-bt">
+                    <a href="/produtos/novo" class="">
                         <button class="btn btn-dark"  type="button">Cadastrar Produto <i class="fa fa-plus"></i></button>
                     </a>
                 </div>                 
                 <div class="col-3">
-                    <a href="/pedidos/list" class="cd-bt">
+                    <a href="/pedidos/list" class="">
                         <button class="btn btn-dark"  type="button">Visualizar Pedidos <i class="fa fa-list-ul"></i></button>
                     </a>
                 </div>            
@@ -61,26 +64,25 @@
                 </tr>            
             </thead>
 
-                <tbody>
-                    @foreach($produto as $p)
-                    <tr>
-                        <td>{{ $p->id }}</td>
-                        <td>{{ $p->nome }}</td>
-                        <td>{{ $p->custo }}</td>
-                        <td>{{ $p->preco }}</td>
-                        <td>{{ $p->quantidade }}</td>
-                        <td><a href="/produtos/edit/{{$p->id}}"><button class="btn btn-info"  type="button"><i class="fa fa-pencil"></i></button></a></td>
-                        <td><a href="/pedidos/novo/{{$p->id}}"><button class="btn btn-primary"  type="button"><i class="fa fa-plus"></i></button></a></td>
-                        <td><a href="/produtos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"><i class="fa fa-trash-o"></i></button></a></td>
-                    </tr>
-                    @endforeach                                
-                </tbody>
-        </table>
-        
+            <tbody>
+                @foreach($produto as $p)
+                 <tr>
+                    <td>{{ $p->id }}</td>
+                    <td>{{ $p->nome }}</td>
+                    <td>{{ $p->custo }}</td>
+                    <td>{{ $p->preco }}</td>
+                    <td>{{ $p->quantidade }}</td>
+                    <td><a href="/produtos/edit/{{$p->id}}"><button class="btn btn-info"  type="button"><i class="fa fa-pencil"></i></button></a></td>
+                    <td><a href="/pedidos/novo/{{$p->id}}"><button class="btn btn-primary"  type="button"><i class="fa fa-plus"></i></button></a></td>
+                    <td><a href="/produtos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"><i class="fa fa-trash-o"></i></button></a></td>
+                </tr>
+                @endforeach                                
+            </tbody>
+        </table>        
         <hr>
         <div class="d-flex justify-content-center">
-    {!! $produto->links() !!}
-</div>
+            {!! $produto->links() !!}
+        </div>
     </div>
 
     <script src="{{ asset('web/jquery.js') }}"></script>

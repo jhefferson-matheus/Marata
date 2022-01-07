@@ -73,10 +73,15 @@ class ProdutosController extends Controller
 
    
     
-    public function search(Request $request)
-    {
-        $produto = Produto::where('nome', '=', "%$request->search%")
-                            ->orWhere('content', 'LIKE', "%$request->search%")
+    public function search(Request $request, Produto $produto)
+    {     
+        $produto = Produto::where('nome', 'LIKE',"%$request->search%")
+                            ->orWhere('custo', 'LIKE', "%$request->search%")
+                            ->orWhere('preco', 'LIKE', "%$request->search%")
+                            ->orWhere('quantidade', 'LIKE', "%$request->search%")
                             ->paginate();
+                            //dd($produto);
+                            //dd($request->search);
+                            return view('produtos.index', compact('produto'));
     }
 }

@@ -23,6 +23,7 @@ Route::get('/produtos/edit/{produto}', [ProdutosController::class, 'edit']);
 Route::post('/produtos/edit/{produto}', [ProdutosController::class, 'update'])->name('atualizarProduto');
 Route::get('/produtos/drop/{produto}', [ProdutosController::class, 'delete']);
 Route::post('/produtos/drop/{produto}', [ProdutosController::class, 'destroy'])->name('deletarProduto');
+Route::post('/produtos/search/', [ProdutosController::class, 'search'])->name('pesquisar');
 /*
 |--------------------------------------------------------------------------|
 |                                  PEDIDOS                                 |
