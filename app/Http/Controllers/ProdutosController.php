@@ -20,7 +20,8 @@ class ProdutosController extends Controller
             'preco' => $request->preco,
             'quantidade' => $request->quantidade,
         ]);
-        return "Produto Criado com Sucesso!";
+        return "<script>javascript:alert('Produto Criado Com Sucesso! 😎');
+        javascript:window.location='../../';</script>";
     }
 
     public function show(Produto $produto)
@@ -45,7 +46,8 @@ class ProdutosController extends Controller
             'preco' => $request->preco,
             'quantidade' => $request->quantidade,
         ]);
-        return "Atualizado Com Sucesso!";
+        return "<script>javascript:alert('Produto Atualizado Com Sucesso! ✏️');
+        javascript:window.location='../../';</script>";
     }
 
     public function delete(Produto $produto)
@@ -59,7 +61,8 @@ class ProdutosController extends Controller
         $produto = Produto::find($produto->id);
         $produto->delete();
 
-        return "Produto Excluido!";
+        return "<script>javascript:alert('Produto Excluido Com Sucesso! 🗑️');
+        javascript:window.location='../../';</script>";
     }
 
     public function index(Request $request, Produto $produto)

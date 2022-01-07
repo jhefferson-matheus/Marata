@@ -21,7 +21,8 @@ class PedidosController extends Controller
             'status' =>  $request->status,            
             'quantidade' => $request->quantidade,
         ]);
-        return "Pedido realizado com sucesso";
+        return "<script>javascript:alert('Pedido Realizado Com Sucesso! 😎');
+        javascript:window.location='../../';</script>";
     }
 
     public function show(Pedido $pedido)
@@ -45,7 +46,9 @@ class PedidosController extends Controller
             'status' =>  $request->status,            
             'quantidade' => $request->quantidade,
         ]);
-        return "Atualizado Com Sucesso!";return view('pedido.show', compact('pedido'));
+        return "<script>javascript:alert('Pedido Atualizado Com Sucesso! ✏️');
+        javascript:window.location='../list';</script>";
+        
     }
 
     public function delete(Pedido $pedido)
@@ -59,7 +62,8 @@ class PedidosController extends Controller
         $pedido = Pedido::find($pedido->id);
         $pedido->delete();
 
-        return "Pedido Excluido!";
+        return "<script>javascript:alert('Pedido Excluido Com Sucesso! 🗑️');
+        javascript:window.location='../list';</script>";
     }
 
     public function list(Request $request, Pedido $pedido)
