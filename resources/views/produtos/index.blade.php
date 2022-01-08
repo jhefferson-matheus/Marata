@@ -78,7 +78,8 @@
                 </tr>
                 @endforeach                                
             </tbody>
-        </table>        
+        </table>     
+        <!--Paginação-->   
         <hr>
         <div class="d-flex justify-content-center">
             {!! $produto->links() !!}

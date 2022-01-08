@@ -50,6 +50,7 @@
             <th scope="col">ID do Produto</th>
             <th scope="col">Status</th>
             <th scope="col">quantidade</th>
+            <th scope="col">Detalhe</th>
             <th scope="col">Editar</th>
             <th scope="col">Excluir</th>
             </tr>
@@ -62,12 +63,14 @@
                     <td>{{ $p->id_produto }}</td>
                     <td>{{ $p->status }}</td>
                     <td>{{ $p->quantidade }}</td>
-                    <td><a href="/pedidos/edit/{{$p->id}}"><button class="btn btn-info"  type="button"><i class="fa fa-pencil"></i></button></a></td>
-                    <td><a href="/pedidos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"><i class="fa fa-trash-o"></i></button></a></td>
+                    <td><a href="/produtos/ver/{{$p->id}}"><button class="btn btn-info"  type="button"><i class="fa fa-eye"></i></button></a></td>
+                    <td><a href="/pedidos/edit/{{$p->id}}"><button class="btn btn-primary"  type="button"><i class="fa fa-pencil"></i></button></a></td>
+                    <td><a href="/pedidos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"><i class="fa fa-trash-o"></i></button></a></td>                    
                 </tr>
                 @endforeach
             </tbody>
         </table>
+        <!--Paginação-->
         <hr>
         <div class="d-flex justify-content-center">
             {!! $pedido->links() !!}

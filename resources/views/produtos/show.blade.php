@@ -23,21 +23,21 @@
     <form class="form_produto m2">
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Nome</label>
-            <input type="text" class="form-control" name="nome" id="formGroupExampleInput2"  disabled="" value="{{ $produto->nome }}">            
+            <input type="text" class="form-control" name="nome" id="formGroupExampleInput2" readonly disabled="" value="{{ $produto->nome }}">            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Custo</label>
-            <input type="text" class="form-control" name="custo" id="formGroupExampleInput2"  disabled="" value="{{ $produto->custo }}">            
+            <input type="text" class="form-control" name="custo" id="formGroupExampleInput2" readonly disabled="" value="{{ $produto->custo }}">            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Preço</label>
-            <input type="text" class="form-control" name="preco" id="formGroupExampleInput2"  disabled="" value="{{ $produto->preco }}">            
+            <input type="text" class="form-control" name="preco" id="formGroupExampleInput2" readonly disabled="" value="{{ $produto->preco }}">            
         </div>
         <div class="form-group form_itens">
             <label for="formGroupExampleInput2">Quantidade</label>
-            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2"  disabled="" value="{{ $produto->quantidade }}">            
+            <input type="text" class="form-control" name="quantidade" id="formGroupExampleInput2" readonly disabled="" value="{{ $produto->quantidade }}">            
         </div>
-        <center><a href="{{route('index')}}" class="btn btn-primary form_itens">Voltar</a></center>
+        <center><a href="{{route('pedidos')}}" class="btn btn-primary form_itens">Voltar</a></center>
     </form>
     
     <script src="{{ asset('web/jquery.js') }}"></script>
