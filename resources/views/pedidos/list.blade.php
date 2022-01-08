@@ -63,7 +63,7 @@
                     <td>{{ $p->id_produto }}</td>
                     <td>{{ $p->status }}</td>
                     <td>{{ $p->quantidade }}</td>
-                    <td><a href="/produtos/ver/{{$p->id}}"><button class="btn btn-info"  type="button"><i class="fa fa-eye"></i></button></a></td>
+                    <td><a href="/produtos/ver/{{$p->id_produto}}"><button class="btn btn-info"  type="button"><i class="fa fa-eye"></i></button></a></td>
                     <td><a href="/pedidos/edit/{{$p->id}}"><button class="btn btn-primary"  type="button"><i class="fa fa-pencil"></i></button></a></td>
                     <td><a href="/pedidos/drop/{{$p->id}}"><button class="btn btn-danger"  type="button"><i class="fa fa-trash-o"></i></button></a></td>                    
                 </tr>
