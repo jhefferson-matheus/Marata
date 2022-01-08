@@ -68,7 +68,17 @@ class PedidosController extends Controller
 
     public function list(Request $request, Pedido $pedido)
     {
-        $pedido = Pedido::all();        
+        $pedido = Pedido::paginate(20);      
         return view('pedidos.list', compact('pedido'));
+    }
+
+    public function search(Request $request, Pedido $pedido)
+    {
+        $pedido = Pedido::where('id_produto', 'LIKE', "%$request->search%")
+                            ->orWhere('status', 'LIKE', "%$request->search%")
+                            ->orWhere('quantidade', 'LIKE', "%$request->search")
+                            ->paginate();
+
+                            return view('pedidos.list', compact('pedido'));
     }
 }

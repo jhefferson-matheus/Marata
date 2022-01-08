@@ -23,7 +23,7 @@ Route::get('/produtos/edit/{produto}', [ProdutosController::class, 'edit']);
 Route::post('/produtos/edit/{produto}', [ProdutosController::class, 'update'])->name('atualizarProduto');
 Route::get('/produtos/drop/{produto}', [ProdutosController::class, 'delete']);
 Route::post('/produtos/drop/{produto}', [ProdutosController::class, 'destroy'])->name('deletarProduto');
-Route::post('/produtos/search/', [ProdutosController::class, 'search'])->name('pesquisar');
+Route::post('/produtos/search', [ProdutosController::class, 'search'])->name('pesquisarProduto');
 /*
 |--------------------------------------------------------------------------|
 |                                  PEDIDOS                                 |
@@ -40,6 +40,4 @@ Route::post('/pedidos/edit/{pedido}', [PedidosController::class, 'update'])->nam
 Route::get('/pedidos/drop/{pedido}', [PedidosController::class, 'delete']);
 Route::post('/pedidos/drop/{pedido}', [PedidosController::class, 'destroy'])->name('deletarPedido');
 Route::get('/pedidos/list', [PedidosController::class, 'list']);
-
-
-
+Route::post('/pedidos/search', [PedidosController::class, 'search'])->name('pesquisarPedido');

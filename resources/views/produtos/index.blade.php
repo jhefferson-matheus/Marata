@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <form action="{{ route('pesquisar') }}" method="post">
+                    <form action="{{ route('pesquisarProduto') }}" method="post">
                         @csrf                    
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Pesquisar Produtos" name="search">

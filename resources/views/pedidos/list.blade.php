@@ -24,17 +24,20 @@
     <div class="list">
         <div class="row">
             <div class="col-6">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Pesquisar Pedidos" name="search">
-                    <div class="input-group-btn">
-                        <button class="btn btn-secondary" type="submit">
-                            <i class="fa fa-search"></i>
-                        </button>
+                <form action="{{ route('pesquisarPedido') }}" method="post"> 
+                    @csrf  
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Pesquisar Pedidos" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-secondary" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="col-6 lft">
-                <a href="{{route('index')}}" class="cd-bt">
+                <a href="{{ route('index') }}" class="">
                     <button class="btn btn-dark"  type="button">Cadastrar Pedidos <i class="fa fa-list-ul"></i></button>
                 </a>
             </div>  
@@ -65,6 +68,10 @@
                 @endforeach
             </tbody>
         </table>
+        <hr>
+        <div class="d-flex justify-content-center">
+            {!! $pedido->links() !!}
+        </div>
     </div>
 
     <script src="{{ asset('web/jquery.js') }}"></script>
